@@ -1,0 +1,15 @@
+Traffic Management to computerize traffic control at a 3-way intersection
+The M.G street street is one-way as pointed by the directional arrow. The B.S street is two-way. The rules for this intersection are:
+ 
+
+1.	Each car (process) arriving at the intersection will call a procedure Enter(inDir, outDir), where inDir and outDir are parameters whose value is one of the defined constants: NORTH, SOUTH, EAST, or WEST. The parameter inDir is the direction that you enter the intersection, and outDir is the direction that you will leave the intersection. This procedure returns only when it is safe to proceed through the intersection.
+
+2.	After  leaving  the  intersection,  the  car (process) must call procedure Leave(outDir), where outDir is defined the same as above.
+
+3.	Cars can proceed straight or make legal turns. U turns are illegal.
+
+4.	If cars are waiting from both the north and east directions, they should proceed at the same time if they can safely do so.
+
+5.	If cars are waiting from both the north and east directions, and they cannot both safely proceed at the same time, they must alternate (this prevents starvation).
+
+6.	The east-west street has a single lane. The north-south street has two lanes - one in either direction.
